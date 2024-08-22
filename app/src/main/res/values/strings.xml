@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">InvestmentApplication</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="investment">Investment</string>
+    <string name="refresh">REFRESH</string>
+    <string name="amazon">Amazon</string>
+    <string name="amz">amz</string>
+</resources>
