@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
+apply plugin: 'kotlin-kapt'
 
 android {
     namespace 'com.example.investmentapplication'
@@ -75,6 +76,11 @@ dependencies {
     debugImplementation libs.androidx.ui.test.manifest
     implementation libs.retrofit
     implementation libs.recyclerview
-    implementation libs.mock
-    implementation libs.mockagent
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.2.5"
+    implementation "androidx.room:room-ktx:2.2.5"
+    androidTestImplementation "androidx.room:room-testing:2.2.5"
+    kapt "androidx.room:room-compiler:2.2.5"
+
 }

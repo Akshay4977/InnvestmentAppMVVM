@@ -1,6 +1,7 @@
 package com.example.investmentapplication.view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.LinearLayout
@@ -12,6 +13,8 @@ import com.example.investmentapplication.utils.Constants
 class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        Log.e("inside","create")
 
         setContentView(R.layout.activity_details)
         val name = intent.getStringExtra(Constants.NAME)
@@ -39,5 +42,37 @@ class DetailsActivity : AppCompatActivity() {
 
         val detailsTextView = findViewById<TextView>(R.id.text_view_details_description)
         detailsTextView.text = details
+    }
+
+    override fun onPause() {
+
+        super.onPause()
+        Log.e("inside","pause")
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+        Log.e("inside","start")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("inside","resume")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.e("inside","stop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.e("inside","destroy")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.e("inside","restart")
     }
 }

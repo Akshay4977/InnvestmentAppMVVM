@@ -3,6 +3,7 @@ package com.example.investmentapplication.view
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.Button
@@ -22,6 +23,7 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var dashboardViewmodel: DashboardViewmodel
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.e("inside","create")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
         dashboardViewmodel = ViewModelProvider(this).get(DashboardViewmodel::class.java)
@@ -78,5 +80,37 @@ class DashboardActivity : AppCompatActivity() {
         intent.putExtra(Constants.TICKER, item.ticker)
         intent.putExtra(Constants.DETAILS, item.details)
         startActivity(intent)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.e("inside","start")
+    }
+
+
+    override fun onPause() {
+
+        super.onPause()
+        Log.e("inside","pause")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("inside","resume")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.e("inside","stop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.e("inside","destroy")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.e("inside","restart")
     }
 }

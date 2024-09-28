@@ -32,12 +32,9 @@ class InvestmentRepo(apiService: ApiService) {
 
         val fileList = arrayOf(
             INVESTMENT_SUCCESS,
-            INVESTMENT_EMPTY,
-            INVESTMENT_ERROR,
-            INVESTMENT_MALFORMED
         )
         val filename = fileList.random()
-        val jsonFileString = getJsonDataFromAsset(context, filename)
+        val jsonFileString = getJsonDataFromAsset(context, INVESTMENT_SUCCESS)
         val gson = Gson()
         val investmentResponseType = object : TypeToken<InvestmentResponse>() {}.type
         val investmentResponse: InvestmentResponse =

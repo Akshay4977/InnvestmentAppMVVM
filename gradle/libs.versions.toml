@@ -36,9 +36,6 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 retrofit = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "gson" }
 recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recycler-view" }
-mock = { group = "io.mockk", name = "mockk", version.ref = "mock" }
-mockagent = { group = "io.mockk", name = "mockk-agent-jvm", version.ref = "mock" }
-
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

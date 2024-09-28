@@ -5,15 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <TextView
-        android:id="@+id/text_view_app_name"
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add" />
+
+
+    <ImageView
+        android:id="@+id/image_view_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/investment"
-        android:textColor="@color/primary"
-        android:textSize="@dimen/font_xx_large"
-        android:textStyle="bold" />
+        android:layout_below="@id/button_add"
+        android:text="Add" />
 
 </RelativeLayout>
